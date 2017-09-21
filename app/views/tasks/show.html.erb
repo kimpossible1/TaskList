@@ -4,3 +4,5 @@
     <li> Due Date: <%= @task.due_date%> </li>
     <li> Completed: <%= @task.complete%> </li>
   </ul>
+
+  <%=button_to "Edit", edit_task_path, method: :get%>

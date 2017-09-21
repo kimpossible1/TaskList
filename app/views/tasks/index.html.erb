@@ -15,7 +15,7 @@
             <li>
               <h3><%=link_to task.title, show_task_path(task.id)%></h3>
               <p>
-              Mark Complete | Edit | Delete
+              Mark Complete <%=button_to "Edit", new_task_path, method: :get%> Delete
               </p>
             </li>
           <%end%>
@@ -24,6 +24,7 @@
 
     <section class="side_buttons">
       <%=button_to "Add New", new_task_path, method: :get%>
+
     </section>
 </main>
 </body>
