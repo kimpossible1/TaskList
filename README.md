@@ -44,7 +44,7 @@ In this wave, we will expand the actions we support and introduce forms for user
       - this will give the user a new page with a **form** with the appropriate task fields
       - the site should take the user back to the task list after the new task is added
 
-<!---
+
 ## Wave 3
 In this wave we will extend the interactivity with users, allowing them to edit existing tasks.
 
@@ -57,6 +57,7 @@ In this wave we will extend the interactivity with users, allowing them to edit 
   - DRY up your code by reusing the view code from the `new` functionality
     - Hint: Rendering _partials_ in Rails
 
+<!---
 ## Wave 4
 In this wave, we will add the ability to delete tasks. We will also add the ability for a user to mark a task complete.
 
