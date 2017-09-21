@@ -15,7 +15,7 @@
             <li>
               <h3><%=link_to task.title, task_path(task.id)%></h3>
               <p>
-              <!-- Mark Complete <%=button_to "Edit", new_task_path, method: :get%> Delete -->
+              <%=button_to "Complete", complete_task_path(task.id), method: :patch%>
               </p>
             </li>
           <%end%>

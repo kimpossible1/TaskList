@@ -1,3 +1,6 @@
+<%= link_to 'Back', tasks_path %>
+
+
 <h2> <%= @task.title%> </h2>
   <p><%= @task.description%> </p>
   <ul>
@@ -7,5 +10,6 @@
 
   <%=button_to "Complete", complete_task_path, method: :patch %>
   <%=button_to "Edit", edit_task_path(@task.id), method: :get%>
-  <%=button_to "Delete", delete_task_path(@task.id), method: :patch%>
+  <!-- <%=button_to "Delete", delete_task_path(@task.id), method: :patch%> -->
   <!-- <%=button_to "Delete", delete_task_path(@task.id), method: :get%> -->
+  <%=button_to "Delete", confirm_delete_task_path, method: :get%>
