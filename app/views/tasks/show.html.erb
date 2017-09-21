@@ -5,4 +5,4 @@
     <li> Completed: <%= @task.complete%> </li>
   </ul>
 
-  <%=button_to "Edit", edit_task_path, method: :get%>
+  <%=button_to "Edit", edit_task_path(@task.id), method: :get%>
