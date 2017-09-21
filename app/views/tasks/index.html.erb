@@ -1,0 +1,29 @@
+<body>
+<header>
+  <a href="">[ Homepage ]</a>
+</header>
+
+<main>
+    <section class="tasklist">
+      <h1>Task List</h1>
+    </section>
+
+    <section class="yourtasks">
+      <h2> Your Tasks </h2>
+        <ol>
+          <%@tasks.each do |task|%>
+            <li>
+              <h3><%=link_to task.title, show_task_path(task.id)%></h3>
+              <p>
+              Mark Complete | Edit | Delete
+              </p>
+            </li>
+          <%end%>
+        </ol>
+    </section>
+</main>
+</body>
+
+<footer>
+
+</footer>

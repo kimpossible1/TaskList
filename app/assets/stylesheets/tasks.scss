@@ -1,0 +1,65 @@
+// Place all the styles related to the Tasks controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+
+main {
+font-family: Arial;
+margin-right: 50%;
+font-size: 12px;
+// border: solid;
+
+// padding: 2%;
+}
+
+header {
+  text-align: center;
+  margin-right: 30%;
+  clear: both;
+}
+
+h1 {
+  font-size: 3em;
+  display: inline-block;
+  float: left;
+  clear: both;
+}
+
+h2 {
+  font-size: 2em;
+  text-align: center;
+}
+
+
+ol {
+  font-size: 1.5em;
+}
+
+p {
+  font-size: 1em;
+}
+
+section.yourtasks {
+  clear: both;
+  float: right;
+  border: solid;
+  border-radius: 5%;
+  padding: 2% 5%;
+}
+
+section.tasklist {
+  clear: left;
+  float: left;
+  border: none;
+  clear: both;
+}
+
+main {
+  border: solid;
+  border-bottom: solid;
+}
+
+footer {
+  clear: both;
+}
