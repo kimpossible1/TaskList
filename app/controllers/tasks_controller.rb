@@ -40,9 +40,17 @@ class TasksController < ApplicationController
 
   end
 
+  # def date_completed
+  #   @date_completed = DateTime.now
+  # end
 
   def complete
     task = Task.find(params[:id])
+    # date_completed
+    unless task.complete == true
+      task.completion_date = DateTime.now
+    end
+    
     task.complete!
     redirect_to tasks_path
   end

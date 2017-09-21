@@ -15,7 +15,12 @@
             <li>
               <h3><%=link_to task.title, task_path(task.id)%></h3>
               <p>
-              <%=button_to "Complete", complete_task_path(task.id), method: :patch%>
+              Completed On: <%= task.completion_date %>
+              </p>
+              <p>
+              <%=button_to "Mark Complete", complete_task_path(task.id), method: :patch%>
+              <%=button_to "Edit", edit_task_path(task.id), method: :get%>
+              <%=button_to "Delete", confirm_delete_task_path(task.id), method: :get%>
               </p>
             </li>
           <%end%>

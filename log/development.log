@@ -5456,3 +5456,840 @@ Processing by TasksController#index as HTML
 Completed 200 OK in 65ms (Views: 54.6ms | ActiveRecord: 0.2ms)
 
 
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddCompletionDateToTasks (20170921201014)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddCompletionDateToTasks (20170921202123)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (2.1ms)[0m  [1m[35mALTER TABLE "tasks" ADD "completion_date" datetime[0m
+  [1m[35mSQL (1.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20170921202123"]]
+  [1m[35m (5.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/tasks" for 127.0.0.1 at 2017-09-21 13:23:04 -0700
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (14.8ms)
+Completed 200 OK in 61ms (Views: 51.8ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/tasks/11" for 127.0.0.1 at 2017-09-21 13:23:12 -0700
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mTask Load (0.6ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/show.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 41ms (Views: 31.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/tasks/11" for 127.0.0.1 at 2017-09-21 13:24:20 -0700
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/show.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 25ms (Views: 21.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/tasks/11" for 127.0.0.1 at 2017-09-21 13:25:59 -0700
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/show.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 42ms (Views: 25.4ms | ActiveRecord: 1.2ms)
+
+
+Started PATCH "/tasks/11/complete" for 127.0.0.1 at 2017-09-21 13:26:02 -0700
+Processing by TasksController#complete as HTML
+  Parameters: {"authenticity_token"=>"sZbL9eFpffiWX8wsUMP9qGGu/aTW7efSgxE4fdNUnTx0DHoP6aBqK2bVmNf5h/7JeUT19ypd/2mjDBw0qE+CsA==", "id"=>"11"}
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/tasks
+Completed 302 Found in 3ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2017-09-21 13:26:02 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 27ms (Views: 24.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/tasks/11" for 127.0.0.1 at 2017-09-21 13:26:04 -0700
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/show.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 41ms (Views: 32.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/tasks/new" for 127.0.0.1 at 2017-09-21 13:26:08 -0700
+Processing by TasksController#new as HTML
+  Rendering tasks/new.html.erb within layouts/application
+  Rendered tasks/_form.html.erb (4.9ms)
+  Rendered tasks/new.html.erb within layouts/application (9.4ms)
+Completed 200 OK in 45ms (Views: 40.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/tasks" for 127.0.0.1 at 2017-09-21 13:26:22 -0700
+Processing by TasksController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"XdjuQ+npR6xyeRvjM3S2exbshFH+F1F522rWd0T64QGYQl+54SBQf4LzTxiaMLUaDgaMAgKnScL7d/I+P+H+jQ==", "task"=>{"title"=>"Complete this task", "description"=>"check the date", "due_date"=>"2017-09-29"}, "commit"=>"Add Task"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.6ms)[0m  [1m[32mINSERT INTO "tasks" ("title", "description", "due_date", "complete", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Complete this task"], ["description", "check the date"], ["due_date", "2017-09-29 00:00:00"], ["complete", "f"], ["created_at", "2017-09-21 20:26:22.596382"], ["updated_at", "2017-09-21 20:26:22.596382"]]
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/tasks
+Completed 302 Found in 11ms (ActiveRecord: 3.6ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2017-09-21 13:26:22 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 25ms (Views: 21.7ms | ActiveRecord: 0.2ms)
+
+
+Started PATCH "/tasks/12/complete" for 127.0.0.1 at 2017-09-21 13:26:27 -0700
+Processing by TasksController#complete as HTML
+  Parameters: {"authenticity_token"=>"nO4BYjWYiNdYG3Y8uUffrRv7cO/PohFEmQthJyDKJ7dZdLCYPVGfBKiRIscQA9zMAxF4vDMSCf+5FkVuW9E4Ow==", "id"=>"12"}
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE "tasks" SET "complete" = ?, "updated_at" = ? WHERE "tasks"."id" = ?[0m  [["complete", "t"], ["updated_at", "2017-09-21 20:26:27.489585"], ["id", 12]]
+  [1m[35m (1.7ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/tasks
+Completed 302 Found in 7ms (ActiveRecord: 2.5ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2017-09-21 13:26:27 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 28ms (Views: 21.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/tasks/12" for 127.0.0.1 at 2017-09-21 13:26:28 -0700
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/show.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 44ms (Views: 38.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2017-09-21 13:27:31 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (17.4ms)
+Completed 200 OK in 48ms (Views: 41.2ms | ActiveRecord: 1.8ms)
+
+
+Started PATCH "/tasks/12/complete" for 127.0.0.1 at 2017-09-21 13:27:32 -0700
+Processing by TasksController#complete as HTML
+  Parameters: {"authenticity_token"=>"cCb1kTA/AUHk3N44aJoVWfu39VbYW8VcCy+T141NXwi1vERrOPYWkhRWisPB3hY44139BSTr3ecrMree9lZAhA==", "id"=>"12"}
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/tasks
+Completed 302 Found in 3ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2017-09-21 13:27:32 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 26ms (Views: 23.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/tasks/12" for 127.0.0.1 at 2017-09-21 13:27:34 -0700
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/show.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 36ms (Views: 29.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/tasks/new" for 127.0.0.1 at 2017-09-21 13:27:40 -0700
+Processing by TasksController#new as HTML
+  Rendering tasks/new.html.erb within layouts/application
+  Rendered tasks/_form.html.erb (4.2ms)
+  Rendered tasks/new.html.erb within layouts/application (9.3ms)
+Completed 200 OK in 34ms (Views: 29.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/tasks" for 127.0.0.1 at 2017-09-21 13:27:47 -0700
+Processing by TasksController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"kBQQFHuXUIPvXEF5xuhRYzBX2uI4UVYm+dgx2NV6GvxVjqHuc15HUB/WFYJvrFICKL3SscThTp3ZxRWRrmEFcA==", "task"=>{"title"=>"Test", "description"=>"", "due_date"=>""}, "commit"=>"Add Task"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.9ms)[0m  [1m[32mINSERT INTO "tasks" ("title", "description", "complete", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "Test"], ["description", ""], ["complete", "f"], ["created_at", "2017-09-21 20:27:47.602943"], ["updated_at", "2017-09-21 20:27:47.602943"]]
+  [1m[35m (2.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/tasks
+Completed 302 Found in 9ms (ActiveRecord: 3.5ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2017-09-21 13:27:47 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 35ms (Views: 32.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/tasks/13" for 127.0.0.1 at 2017-09-21 13:27:49 -0700
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/show.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 39ms (Views: 31.8ms | ActiveRecord: 0.3ms)
+
+
+Started PATCH "/tasks/13/complete" for 127.0.0.1 at 2017-09-21 13:27:51 -0700
+Processing by TasksController#complete as HTML
+  Parameters: {"authenticity_token"=>"bLnHeW5rmEBrK8IriGLxmGHrAeBigcKZ4rmR8ZUtxd8cIIZsx1Zgq4FuwoA6G1JZi6s/kmQwGy/t2PT3M68P+w==", "id"=>"13"}
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE "tasks" SET "complete" = ?, "updated_at" = ? WHERE "tasks"."id" = ?[0m  [["complete", "t"], ["updated_at", "2017-09-21 20:27:51.543694"], ["id", 13]]
+  [1m[35m (1.4ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/tasks
+Completed 302 Found in 5ms (ActiveRecord: 2.0ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2017-09-21 13:27:51 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 27ms (Views: 23.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/tasks/13" for 127.0.0.1 at 2017-09-21 13:27:54 -0700
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/show.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 37ms (Views: 30.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2017-09-21 13:31:02 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (12.8ms)
+Completed 200 OK in 38ms (Views: 30.7ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/tasks/13" for 127.0.0.1 at 2017-09-21 13:31:05 -0700
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/show.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 37ms (Views: 30.0ms | ActiveRecord: 0.3ms)
+
+
+Started PATCH "/tasks/13/complete" for 127.0.0.1 at 2017-09-21 13:31:07 -0700
+Processing by TasksController#complete as HTML
+  Parameters: {"authenticity_token"=>"6Gy616XkwjW20XghD2ImkuwczCIfd7yeB/9bxYRZYsaY9fvCDNk63lyUeIq9G4VTBlzyUBnGZSgInj7DItuo4g==", "id"=>"13"}
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[33mUPDATE "tasks" SET "completion_date" = ?, "updated_at" = ? WHERE "tasks"."id" = ?[0m  [["completion_date", "2017-09-21 20:31:07.639951"], ["updated_at", "2017-09-21 20:31:07.642344"], ["id", 13]]
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/tasks
+Completed 302 Found in 9ms (ActiveRecord: 2.5ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2017-09-21 13:31:07 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 27ms (Views: 22.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/tasks/13" for 127.0.0.1 at 2017-09-21 13:31:09 -0700
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/show.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 43ms (Views: 37.4ms | ActiveRecord: 0.3ms)
+
+
+Started PATCH "/tasks/13/complete" for 127.0.0.1 at 2017-09-21 13:31:16 -0700
+Processing by TasksController#complete as HTML
+  Parameters: {"authenticity_token"=>"ZsESu1L14+3gTchRQyCBg5DBp5HSWjtSlyicVXyJj6gWWFOu+8gbBgoIyPrxWSJCeoGZ49Tr4uSYSflT2gtFjA==", "id"=>"13"}
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[33mUPDATE "tasks" SET "completion_date" = ?, "updated_at" = ? WHERE "tasks"."id" = ?[0m  [["completion_date", "2017-09-21 20:31:16.060887"], ["updated_at", "2017-09-21 20:31:16.061675"], ["id", 13]]
+  [1m[35m (1.7ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/tasks
+Completed 302 Found in 8ms (ActiveRecord: 2.6ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2017-09-21 13:31:16 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 38ms (Views: 33.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/tasks/13" for 127.0.0.1 at 2017-09-21 13:31:17 -0700
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/show.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 39ms (Views: 31.8ms | ActiveRecord: 0.2ms)
+
+
+Started PATCH "/tasks/13/complete" for 127.0.0.1 at 2017-09-21 13:31:22 -0700
+Processing by TasksController#complete as HTML
+  Parameters: {"authenticity_token"=>"I7XshNwIxIkNmh27Xxi3f42WdOMivEs8zVXVFPQmwCZTLK2RdTU8YuffHRDtYRS+Z9ZKkSQNkorCNLASUqQKAg==", "id"=>"13"}
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[33mUPDATE "tasks" SET "completion_date" = ?, "updated_at" = ? WHERE "tasks"."id" = ?[0m  [["completion_date", "2017-09-21 20:31:22.627132"], ["updated_at", "2017-09-21 20:31:22.627868"], ["id", 13]]
+  [1m[35m (1.7ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/tasks
+Completed 302 Found in 7ms (ActiveRecord: 2.6ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2017-09-21 13:31:22 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 27ms (Views: 23.3ms | ActiveRecord: 0.2ms)
+
+
+Started PATCH "/tasks/13/complete" for 127.0.0.1 at 2017-09-21 13:31:25 -0700
+Processing by TasksController#complete as HTML
+  Parameters: {"authenticity_token"=>"ig30mtjzNu9h7kNLvYPgdw44XLlpQquVmFuGNNx7OddPl0Vg0DohPJFkF7AUx+MWFtJU6pXysy64RqJ9p2AmWw==", "id"=>"13"}
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE "tasks" SET "completion_date" = ?, "updated_at" = ? WHERE "tasks"."id" = ?[0m  [["completion_date", "2017-09-21 20:31:25.952993"], ["updated_at", "2017-09-21 20:31:25.953469"], ["id", 13]]
+  [1m[35m (2.1ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/tasks
+Completed 302 Found in 6ms (ActiveRecord: 2.7ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2017-09-21 13:31:25 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 27ms (Views: 24.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/tasks/13" for 127.0.0.1 at 2017-09-21 13:31:26 -0700
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/show.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 41ms (Views: 36.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/tasks/13" for 127.0.0.1 at 2017-09-21 13:32:11 -0700
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/show.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 55ms (Views: 38.2ms | ActiveRecord: 1.2ms)
+
+
+Started PATCH "/tasks/13/complete" for 127.0.0.1 at 2017-09-21 13:32:13 -0700
+Processing by TasksController#complete as HTML
+  Parameters: {"authenticity_token"=>"+QsZNBWJ9zQ0m6A0IN9zI8SYAzo5AmAUbJX+kAqaNI88kajOHUDg58QR9M+Jm3BC3HILacWyeK9MiNrZcYErAw==", "id"=>"13"}
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/tasks
+Completed 302 Found in 4ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2017-09-21 13:32:13 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 28ms (Views: 24.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/tasks/13" for 127.0.0.1 at 2017-09-21 13:32:14 -0700
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/show.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 42ms (Views: 36.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/tasks/13" for 127.0.0.1 at 2017-09-21 13:32:18 -0700
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/show.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 42ms (Views: 37.1ms | ActiveRecord: 0.2ms)
+
+
+Started PATCH "/tasks/13/complete" for 127.0.0.1 at 2017-09-21 13:32:20 -0700
+Processing by TasksController#complete as HTML
+  Parameters: {"authenticity_token"=>"MS/r6MTsK+MvzV5HhimJISpUka4QS937ZOupMhiWxzT0tVoSzCU8MN9HCrwvbYpAMr6Z/ez7xUBE9o17Y43YuA==", "id"=>"13"}
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/tasks
+Completed 302 Found in 4ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2017-09-21 13:32:20 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 27ms (Views: 24.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/tasks/13" for 127.0.0.1 at 2017-09-21 13:32:22 -0700
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/show.html.erb within layouts/application (6.3ms)
+Completed 200 OK in 43ms (Views: 37.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2017-09-21 13:33:30 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (2.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (13.8ms)
+Completed 500 Internal Server Error in 34ms (ActiveRecord: 2.1ms)
+
+
+  
+ActionView::Template::Error (undefined method `completion_date' for nil:NilClass):
+    15:             <li>
+    16:               <h3><%=link_to task.title, task_path(task.id)%></h3>
+    17:               <p>
+    18:               Completion Date: <%= @task.completion_date %>
+    19:               <%=button_to "Complete", complete_task_path(task.id), method: :patch%>
+    20:               </p>
+    21:             </li>
+  
+app/views/tasks/index.html.erb:18:in `block in _app_views_tasks_index_html_erb__67294304359063174_70347892534960'
+app/views/tasks/index.html.erb:14:in `_app_views_tasks_index_html_erb__67294304359063174_70347892534960'
+Started GET "/tasks" for 127.0.0.1 at 2017-09-21 13:38:38 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (14.6ms)
+Completed 200 OK in 42ms (Views: 34.5ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/tasks/2" for 127.0.0.1 at 2017-09-21 13:38:55 -0700
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/show.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 42ms (Views: 35.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/tasks/2/edit" for 127.0.0.1 at 2017-09-21 13:38:59 -0700
+Processing by TasksController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering tasks/edit.html.erb within layouts/application
+  Rendered tasks/_form.html.erb (2.9ms)
+  Rendered tasks/edit.html.erb within layouts/application (8.2ms)
+Completed 200 OK in 33ms (Views: 28.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2017-09-21 13:39:22 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (6.7ms)
+Completed 200 OK in 43ms (Views: 36.7ms | ActiveRecord: 0.3ms)
+
+
+Started PATCH "/tasks/12/complete" for 127.0.0.1 at 2017-09-21 13:39:30 -0700
+Processing by TasksController#complete as HTML
+  Parameters: {"authenticity_token"=>"r7ECZ+A2MHEL5kXBkxJkt0ZOUf4zKy2ZW4lfcQmTrOqOrgk0UArpxfnpykTYZD5131V+aBEU0PMvzjbTwFwVbg==", "id"=>"12"}
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/tasks
+Completed 302 Found in 3ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2017-09-21 13:39:30 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 27ms (Views: 24.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2017-09-21 13:49:50 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 46ms (Views: 42.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2017-09-21 13:51:57 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (6.6ms)
+Completed 500 Internal Server Error in 17ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (undefined method `id' for nil:NilClass):
+    17:               <p>
+    18:               Completion Date: <%= task.completion_date %>
+    19:               <%=button_to "Mark Complete", complete_task_path(task.id), method: :patch%>
+    20:               <%=button_to "Edit", edit_task_path(@task.id), method: :get%>
+    21:               <%=button_to "Delete", confirm_delete_task_path, method: :get%>
+    22:               </p>
+    23:             </li>
+  
+app/views/tasks/index.html.erb:20:in `block in _app_views_tasks_index_html_erb__67294304359063174_70347934732460'
+app/views/tasks/index.html.erb:14:in `_app_views_tasks_index_html_erb__67294304359063174_70347934732460'
+Started GET "/tasks" for 127.0.0.1 at 2017-09-21 13:52:25 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (7.8ms)
+Completed 500 Internal Server Error in 19ms (ActiveRecord: 0.4ms)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"confirm_delete", :controller=>"tasks"}, missing required keys: [:id]):
+    18:               Completion Date: <%= task.completion_date %>
+    19:               <%=button_to "Mark Complete", complete_task_path(task.id), method: :patch%>
+    20:               <%=button_to "Edit", edit_task_path(task.id), method: :get%>
+    21:               <%=button_to "Delete", confirm_delete_task_path, method: :get%>
+    22:               </p>
+    23:             </li>
+    24:           <%end%>
+  
+app/views/tasks/index.html.erb:21:in `block in _app_views_tasks_index_html_erb__67294304359063174_70347892402000'
+app/views/tasks/index.html.erb:14:in `_app_views_tasks_index_html_erb__67294304359063174_70347892402000'
+Started GET "/tasks/2/edit" for 127.0.0.1 at 2017-09-21 13:52:32 -0700
+Processing by TasksController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering tasks/edit.html.erb within layouts/application
+  Rendered tasks/_form.html.erb (4.2ms)
+  Rendered tasks/edit.html.erb within layouts/application (10.1ms)
+Completed 200 OK in 36ms (Views: 32.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2017-09-21 13:52:36 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (7.3ms)
+Completed 500 Internal Server Error in 23ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"confirm_delete", :controller=>"tasks"}, missing required keys: [:id]):
+    18:               Completion Date: <%= task.completion_date %>
+    19:               <%=button_to "Mark Complete", complete_task_path(task.id), method: :patch%>
+    20:               <%=button_to "Edit", edit_task_path(task.id), method: :get%>
+    21:               <%=button_to "Delete", confirm_delete_task_path, method: :get%>
+    22:               </p>
+    23:             </li>
+    24:           <%end%>
+  
+app/views/tasks/index.html.erb:21:in `block in _app_views_tasks_index_html_erb__67294304359063174_70347903822960'
+app/views/tasks/index.html.erb:14:in `_app_views_tasks_index_html_erb__67294304359063174_70347903822960'
+Started GET "/tasks/13" for 127.0.0.1 at 2017-09-21 13:52:38 -0700
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mTask Load (0.9ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/show.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 64ms (Views: 57.7ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/tasks/13" for 127.0.0.1 at 2017-09-21 13:52:38 -0700
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/show.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 50ms (Views: 44.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2017-09-21 13:52:39 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (6.4ms)
+Completed 500 Internal Server Error in 22ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"confirm_delete", :controller=>"tasks"}, missing required keys: [:id]):
+    18:               Completion Date: <%= task.completion_date %>
+    19:               <%=button_to "Mark Complete", complete_task_path(task.id), method: :patch%>
+    20:               <%=button_to "Edit", edit_task_path(task.id), method: :get%>
+    21:               <%=button_to "Delete", confirm_delete_task_path, method: :get%>
+    22:               </p>
+    23:             </li>
+    24:           <%end%>
+  
+app/views/tasks/index.html.erb:21:in `block in _app_views_tasks_index_html_erb__67294304359063174_70347946465440'
+app/views/tasks/index.html.erb:14:in `_app_views_tasks_index_html_erb__67294304359063174_70347946465440'
+Started GET "/tasks" for 127.0.0.1 at 2017-09-21 13:53:00 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.6ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (6.5ms)
+Completed 200 OK in 33ms (Views: 28.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/tasks/13/confirm_delete" for 127.0.0.1 at 2017-09-21 13:53:04 -0700
+Processing by TasksController#confirm_delete as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  Rendering tasks/confirm_delete.html.erb within layouts/application
+  Rendered tasks/confirm_delete.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 29ms (Views: 24.4ms | ActiveRecord: 0.2ms)
+
+
+Started PATCH "/tasks/13/delete" for 127.0.0.1 at 2017-09-21 13:53:06 -0700
+Processing by TasksController#delete as HTML
+  Parameters: {"authenticity_token"=>"BxHb9k48VGdWkCf39u1H36itSNyEWoztR1yMTzSFhxXCi2oMRvVDtKYacwxfqUS+sEdAj3jqlFZnQagGT56YmQ==", "id"=>"13"}
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  [1m[35mSQL (2.2ms)[0m  [1m[31mDELETE FROM "tasks" WHERE "tasks"."id" = ?[0m  [["id", 13]]
+Redirected to http://localhost:3000/tasks
+Completed 302 Found in 6ms (ActiveRecord: 2.4ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2017-09-21 13:53:06 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 33ms (Views: 28.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/tasks/12/edit" for 127.0.0.1 at 2017-09-21 13:53:13 -0700
+Processing by TasksController#edit as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  Rendering tasks/edit.html.erb within layouts/application
+  Rendered tasks/_form.html.erb (2.7ms)
+  Rendered tasks/edit.html.erb within layouts/application (7.5ms)
+Completed 200 OK in 32ms (Views: 28.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2017-09-21 13:53:15 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (6.4ms)
+Completed 200 OK in 40ms (Views: 32.7ms | ActiveRecord: 0.4ms)
+
+
+Started PATCH "/tasks/12/complete" for 127.0.0.1 at 2017-09-21 13:53:18 -0700
+Processing by TasksController#complete as HTML
+  Parameters: {"authenticity_token"=>"FrAz4uYQDijZPWWMVptwfjiG8sBvdiYA6jejXBRYt2A3rzixVizXnCsy6gkd7Sq8oZ3dVk1J22qecMr+3ZcO5A==", "id"=>"12"}
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/tasks
+Completed 302 Found in 3ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2017-09-21 13:53:18 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 27ms (Views: 25.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/tasks/12" for 127.0.0.1 at 2017-09-21 13:53:22 -0700
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/show.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 49ms (Views: 41.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/tasks/12/confirm_delete" for 127.0.0.1 at 2017-09-21 13:53:28 -0700
+Processing by TasksController#confirm_delete as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  Rendering tasks/confirm_delete.html.erb within layouts/application
+  Rendered tasks/confirm_delete.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 35ms (Views: 30.5ms | ActiveRecord: 0.3ms)
+
+
+Started PATCH "/tasks/12/delete" for 127.0.0.1 at 2017-09-21 13:53:30 -0700
+Processing by TasksController#delete as HTML
+  Parameters: {"authenticity_token"=>"P+lbnYLgNPiv9aETaomhF2kPihcvrGSKCJoAARm4Osn6c+pniikjK19/9ejDzaJ2ceWCRNMcfDEohyRIYqMlRQ==", "id"=>"12"}
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  [1m[35mSQL (3.7ms)[0m  [1m[31mDELETE FROM "tasks" WHERE "tasks"."id" = ?[0m  [["id", 12]]
+Redirected to http://localhost:3000/tasks
+Completed 302 Found in 6ms (ActiveRecord: 3.8ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2017-09-21 13:53:30 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 29ms (Views: 25.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/tasks/11/edit" for 127.0.0.1 at 2017-09-21 13:53:36 -0700
+Processing by TasksController#edit as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  Rendering tasks/edit.html.erb within layouts/application
+  Rendered tasks/_form.html.erb (2.5ms)
+  Rendered tasks/edit.html.erb within layouts/application (7.2ms)
+Completed 200 OK in 32ms (Views: 29.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/tasks/11" for 127.0.0.1 at 2017-09-21 13:53:40 -0700
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mTask Load (0.6ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/show.html.erb within layouts/application (5.2ms)
+Completed 200 OK in 38ms (Views: 31.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/tasks/11/confirm_delete" for 127.0.0.1 at 2017-09-21 13:53:44 -0700
+Processing by TasksController#confirm_delete as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  Rendering tasks/confirm_delete.html.erb within layouts/application
+  Rendered tasks/confirm_delete.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 27ms (Views: 22.5ms | ActiveRecord: 0.2ms)
+
+
+Started PATCH "/tasks/11/delete" for 127.0.0.1 at 2017-09-21 13:53:46 -0700
+Processing by TasksController#delete as HTML
+  Parameters: {"authenticity_token"=>"kHJ0OlpA9XRpCw6k6zu1PUxIjOyBHZR7/cnKXnDNjmZV6MXAUonip5mBWl9Cf7ZcVKKEv32tjMDd1O4XC9aR6g==", "id"=>"11"}
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  [1m[35mSQL (4.0ms)[0m  [1m[31mDELETE FROM "tasks" WHERE "tasks"."id" = ?[0m  [["id", 11]]
+Redirected to http://localhost:3000/tasks
+Completed 302 Found in 7ms (ActiveRecord: 4.1ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2017-09-21 13:53:46 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 29ms (Views: 23.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/tasks/new" for 127.0.0.1 at 2017-09-21 13:53:54 -0700
+Processing by TasksController#new as HTML
+  Rendering tasks/new.html.erb within layouts/application
+  Rendered tasks/_form.html.erb (2.7ms)
+  Rendered tasks/new.html.erb within layouts/application (7.3ms)
+Completed 200 OK in 33ms (Views: 30.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/tasks" for 127.0.0.1 at 2017-09-21 13:53:58 -0700
+Processing by TasksController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"mY2qmvZ9Y2DlCB3OZPO2AeY53VuWwiyWb5GFlKAU1PhcFxtg/rR0sxWCSTXNt7Vg/tPVCGpyNC1PjKHd2w/LdA==", "task"=>{"title"=>"test", "description"=>"", "due_date"=>""}, "commit"=>"Add Task"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "tasks" ("title", "description", "complete", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "test"], ["description", ""], ["complete", "f"], ["created_at", "2017-09-21 20:53:58.652461"], ["updated_at", "2017-09-21 20:53:58.652461"]]
+  [1m[35m (3.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/tasks
+Completed 302 Found in 9ms (ActiveRecord: 4.6ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2017-09-21 13:53:58 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 25ms (Views: 22.0ms | ActiveRecord: 0.2ms)
+
+
+Started PATCH "/tasks/14/complete" for 127.0.0.1 at 2017-09-21 13:54:00 -0700
+Processing by TasksController#complete as HTML
+  Parameters: {"authenticity_token"=>"wi//U3w1rxX6GT0YkSauaMLp2OpuCxNdM+vEVwNN5aUHtU6pdPy4xgqTaeM4Yq0J2gPQuZK7C+YT9uAeeFb6KQ==", "id"=>"14"}
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE "tasks" SET "complete" = ?, "completion_date" = ?, "updated_at" = ? WHERE "tasks"."id" = ?[0m  [["complete", "t"], ["completion_date", "2017-09-21 20:54:00.926086"], ["updated_at", "2017-09-21 20:54:00.926730"], ["id", 14]]
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/tasks
+Completed 302 Found in 17ms (ActiveRecord: 2.2ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2017-09-21 13:54:00 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 25ms (Views: 22.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2017-09-21 13:54:33 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (4.9ms)
+Completed 200 OK in 28ms (Views: 24.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2017-09-21 13:55:16 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 42ms (Views: 39.6ms | ActiveRecord: 0.2ms)
+
+

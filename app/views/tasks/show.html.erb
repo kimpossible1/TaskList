@@ -6,6 +6,7 @@
   <ul>
     <li> Due Date: <%= @task.due_date%> </li>
     <li> Completed: <%= @task.complete%> </li>
+    <li> Completion Date: <%= @task.completion_date %> </li>
   </ul>
 
   <%=button_to "Complete", complete_task_path, method: :patch %>
