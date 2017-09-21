@@ -1727,3 +1727,95 @@ Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
 NoMethodError (undefined method `[]' for nil:NilClass):
   
 app/controllers/tasks_controller.rb:16:in `create'
+Started GET "/tasks/new" for 127.0.0.1 at 2017-09-20 19:39:13 -0700
+Processing by TasksController#new as HTML
+  Rendering tasks/new.html.erb within layouts/application
+  Rendered tasks/new.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 29ms (Views: 25.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/tasks" for 127.0.0.1 at 2017-09-20 19:39:20 -0700
+Processing by TasksController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"AsJXEpvjLEoPPEyj888Ohg1zNeSWqJoQlz6gGv1hfzPHWObokyo7mf+2GFhaiw3nFZk9t2oYgqu3I4RThnpgvw==", "commit"=>"Add Task"}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `[]' for nil:NilClass):
+  
+app/controllers/tasks_controller.rb:16:in `create'
+Started GET "/tasks/new" for 127.0.0.1 at 2017-09-20 19:40:02 -0700
+Processing by TasksController#new as HTML
+  Rendering tasks/new.html.erb within layouts/application
+  Rendered tasks/new.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 53ms (Views: 50.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/tasks/new" for 127.0.0.1 at 2017-09-20 19:40:48 -0700
+Processing by TasksController#new as HTML
+  Rendering tasks/new.html.erb within layouts/application
+  Rendered tasks/new.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 29ms (Views: 26.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/tasks" for 127.0.0.1 at 2017-09-20 19:41:04 -0700
+Processing by TasksController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"vSiQ04IO63hCJKAAObzOAuvL1pWWx7Oipz52+1Owm7R4siEpisf8q7Ku9PuQ+M1j8yHexmp3qxmHI1KyKKuEOA==", "task"=>{"title"=>"Do Laundry", "description"=>"do it", "due_date"=>"9/29/2017"}, "commit"=>"Add Task"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (2.0ms)[0m  [1m[32mINSERT INTO "tasks" ("title", "description", "complete", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "Do Laundry"], ["description", "do it"], ["complete", "f"], ["created_at", "2017-09-21 02:41:04.188910"], ["updated_at", "2017-09-21 02:41:04.188910"]]
+  [1m[35m (11.5ms)[0m  [1m[36mcommit transaction[0m
+Completed 500 Internal Server Error in 200ms (ActiveRecord: 13.7ms)
+
+
+  
+NameError (undefined local variable or method `task' for #<TasksController:0x007ff64a32a198>
+Did you mean?  @task):
+  
+app/controllers/tasks_controller.rb:19:in `create'
+Started POST "/tasks" for 127.0.0.1 at 2017-09-20 19:41:33 -0700
+Processing by TasksController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"vSiQ04IO63hCJKAAObzOAuvL1pWWx7Oipz52+1Owm7R4siEpisf8q7Ku9PuQ+M1j8yHexmp3qxmHI1KyKKuEOA==", "task"=>{"title"=>"Do Laundry", "description"=>"do it", "due_date"=>"9/29/2017"}, "commit"=>"Add Task"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "tasks" ("title", "description", "complete", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "Do Laundry"], ["description", "do it"], ["complete", "f"], ["created_at", "2017-09-21 02:41:33.664681"], ["updated_at", "2017-09-21 02:41:33.664681"]]
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/tasks
+Completed 302 Found in 21ms (ActiveRecord: 3.0ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2017-09-20 19:41:33 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 43ms (Views: 39.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/tasks/new" for 127.0.0.1 at 2017-09-20 19:41:35 -0700
+Processing by TasksController#new as HTML
+  Rendering tasks/new.html.erb within layouts/application
+  Rendered tasks/new.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 28ms (Views: 25.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/tasks" for 127.0.0.1 at 2017-09-20 19:42:03 -0700
+Processing by TasksController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"1dnf4ozGeZac8Jlc8OuynfJd63wYBeHIZSDqSjkK/YgQQ24YhA9uRWx6zadZr7H86rfjL+S1+XNFPc4DQhHiBA==", "task"=>{"title"=>"Laundry", "description"=>"do laundry", "due_date"=>"2017-09-29"}, "commit"=>"Add Task"}
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "tasks" ("title", "description", "due_date", "complete", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Laundry"], ["description", "do laundry"], ["due_date", "2017-09-29 00:00:00"], ["complete", "f"], ["created_at", "2017-09-21 02:42:03.444859"], ["updated_at", "2017-09-21 02:42:03.444859"]]
+  [1m[35m (3.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/tasks
+Completed 302 Found in 11ms (ActiveRecord: 4.7ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2017-09-20 19:42:03 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 26ms (Views: 22.6ms | ActiveRecord: 0.2ms)
+
+

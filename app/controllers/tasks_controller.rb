@@ -16,7 +16,7 @@ class TasksController < ApplicationController
     @task = Task.new(title: params[:task][:title], description: params[:task][:description], due_date: params[:task][:due_date], complete: false)
 
     if @task.save
-      task.save
+      @task.save
       redirect_to tasks_path
     else
       render :new
