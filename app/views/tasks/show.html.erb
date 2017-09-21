@@ -6,3 +6,5 @@
   </ul>
 
   <%=button_to "Edit", edit_task_path(@task.id), method: :get%>
+  <%=button_to "Delete", delete_task_path(@task.id), method: :patch%>
+  <!-- <%=button_to "Delete", delete_task_path(@task.id), method: :get%> -->

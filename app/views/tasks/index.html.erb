@@ -13,9 +13,9 @@
         <ol>
           <%@tasks.each do |task|%>
             <li>
-              <h3><%=link_to task.title, show_task_path(task.id)%></h3>
+              <h3><%=link_to task.title, task_path(task.id)%></h3>
               <p>
-              Mark Complete <%=button_to "Edit", new_task_path, method: :get%> Delete
+              <!-- Mark Complete <%=button_to "Edit", new_task_path, method: :get%> Delete -->
               </p>
             </li>
           <%end%>
