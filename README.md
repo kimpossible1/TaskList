@@ -18,6 +18,7 @@ In this baseline, you'll create a new Rails application and get started with two
   - create a controller action for the task `index` page which contains an array of hard-coded tasks
   - create an ERB view to display the tasks from the controller action
 
+
 ## Wave 1
 This wave is where we introduce ActiveRecord to create a model. We use the model to persist our data.
 
@@ -28,7 +29,8 @@ This wave is where we introduce ActiveRecord to create a model. We use the model
 1. update the controller's `index` action you created to retrieve and show `all` Task objects from the database
     - you may need to update the view as well to use the model fields rather than the hard-coded data
 
-<!---
+
+
 ## Wave 2
 In this wave, we will expand the actions we support and introduce forms for user interactivity and persistence.
 
@@ -42,6 +44,7 @@ In this wave, we will expand the actions we support and introduce forms for user
       - this will give the user a new page with a **form** with the appropriate task fields
       - the site should take the user back to the task list after the new task is added
 
+
 ## Wave 3
 In this wave we will extend the interactivity with users, allowing them to edit existing tasks.
 
@@ -54,6 +57,7 @@ In this wave we will extend the interactivity with users, allowing them to edit 
   - DRY up your code by reusing the view code from the `new` functionality
     - Hint: Rendering _partials_ in Rails
 
+
 ## Wave 4
 In this wave, we will add the ability to delete tasks. We will also add the ability for a user to mark a task complete.
 
@@ -64,7 +68,7 @@ In this wave, we will add the ability to delete tasks. We will also add the abil
 1. Mark a task complete
     - Add a button to the list of tasks on the home page that, when clicked, will mark a task complete
     - Update the database with the task's completed date
---->
+
 
 ### Optional Design
 The focus of this project is to familiarize yourself with rails. Design of this application is optional and secondary to learning goals this project. If you do find you have time to style the design of your application, you can use or own design or the wireframes below.
