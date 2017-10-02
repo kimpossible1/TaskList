@@ -50,18 +50,18 @@ class TasksController < ApplicationController
     unless task.complete == true
       task.completion_date = DateTime.now
     end
-    
+
     task.complete!
     redirect_to tasks_path
   end
 
-  def confirm_delete
-    @task = Task.find(params[:id])
-  end
+  # def confirm_delete
+  #   @task = Task.find(params[:id])
+  # end
 
   def delete
     @task = Task.find(params[:id])
-    @task.delete
+    @task.destroy
 
     redirect_to tasks_path
   end

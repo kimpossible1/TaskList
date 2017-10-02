@@ -1,3 +1,19 @@
+
+<% button_text ||= "Submit" %>
+
+
+<%=form_for @task do |f|%>
+  <%=f.label :title%>
+  <%=f.text_field :title, placeholder: "title"%>
+  <%=f.label :description%>
+  <%=f.text_field :description, placeholder: "describe the task"%>
+  <%=f.label :due_date%>
+  <%=f.text_field :due_date, placeholder: "YYYY-MM-DD"%>
+  <%=f.submit button_text%>
+<%end%>
+
+
+
 <!--
 <%= form_with model: @task do |form| %>
 

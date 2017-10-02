@@ -6,7 +6,10 @@
 
 
 <h1> Edit Task </h1>
-<section>
+
+<%= render partial: "form", locals: { button_text: "Confirm Edits" }%>
+
+<!-- <section>
   <%=form_for @task do |f|%>
     <%=f.label :title%>
     <%=f.text_field :title%>
@@ -16,4 +19,4 @@
     <%=f.text_field :due_date%>
     <%=f.submit "Submit Edits"%>
   <%end%>
-</section>
+</section> -->

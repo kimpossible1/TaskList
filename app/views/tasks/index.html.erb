@@ -20,7 +20,7 @@
               <p>
               <%=button_to "Mark Complete", complete_task_path(task.id), method: :patch%>
               <%=button_to "Edit", edit_task_path(task.id), method: :get%>
-              <%=button_to "Delete", confirm_delete_task_path(task.id), method: :get%>
+              <%=button_to "Delete", delete_task_path(task.id), method: :delete, data: {confirm: "Are you sure?"} %>
               </p>
             </li>
           <%end%>
